@@ -1,134 +1,97 @@
-# Quickstart: Playground
+# Quickstart: Exploring the Playground
 
-This guide will have you investigating a live production environment. By the end, you'll understand how to use Resolve AI to debug across logs, metrics, traces, infrastructure, and code.
-
-## Before You Begin
-
-Make sure you have:
-
-- A Resolve AI account ([sign up here](http://app0.resolve.ai))
-- Access to the Playground environment
-
-If you're logged in to a different environment, click your profile in the bottom-left corner, then **Switch to my org → Playground**. If you're already in the playground environment, continue with the steps below.
-
-You're now connected to a live e-commerce application with 19 microservices running on AWS EKS: complete with real traffic, real errors, and real telemetry. Learn more about the application Resolve AI is connected to in [Understanding Playground Environment](understanding-playground.md).
+Step into a live production environment. In this guide, you'll learn how to investigate a complex e-commerce application—debugging across logs, metrics, traces, and code—all within minutes.
 
 ---
 
-## Step 1: Ask Your First Question
+## The Playground Environment
 
-The best way to understand what Resolve AI can do is to start with simple questions and build from there. Start by asking Resolve AI to retrieve specific data. These questions help you see what data is available and how to ask for it. Type your first question:
+You're connected to a live e-commerce platform running on **AWS EKS** with 19 microservices. It's a high-fidelity simulation complete with real traffic, real errors, and real telemetry.
 
-> "What services are in this environment?"
-
-Resolve AI will list the 19 services in the e-commerce platform. This confirms you're connected and gives you the vocabulary for follow-up questions.
-
-Try a few more:
-
-> "Show me error logs from the payment service in the last hour"
-
-> "What's the P95 latency for checkout?"
-
-> "Are there any failing pods?"
-
-This pulls logs from Loki. You'll see the logs filtered by service and time without requiring you to learn specific query or syntax.
-
-![Example: Metrics from Prometheus](https://raw.githubusercontent.com/krovvidiv-code/image-storage/main/docs/images/image4.png)
-
-*In this example, Resolve AI pulls metrics from Prometheus. Now you're seeing a different data source in the same natural language interface.*
-
-At this point, you've touched logs, metrics, or infrastructure. You've seen that you can use service names, time ranges, and natural language to get data from the right backend.
+> [!NOTE]
+> To learn more about the underlying architecture, check out [Understanding the Playground Environment](understanding-playground.md).
 
 ---
 
-## Step 2: Run a Simple Investigation
+## 🚀 Step 1: Data Retrieval Basics
 
-Debugging real production scenarios rarely is restricted to a single domain on a data source. You're constantly jumping between logs, metrics, code, and infrastructure. Explore how Resolve AI retrieves the right information and connects the dots so that you don't have to. Try questions that connect multiple sources:
+The best way to start is by asking for specific data. This helps you get comfortable with the natural language interface and understand what's available.
 
-> "Show me pod restarts and the errors that caused them"
+Try these prompts:
 
-This combines infrastructure state (which pods restarted) with log data (what errors preceded the restart). One question instead of two tabs and manual correlation.
+> **"What services are in this environment?"**
+> *Resolve AI lists all 19 services, giving you the vocabulary for deeper questions.*
 
-> "What code changes correspond to the recent payment deployment?"
+> **"Show me error logs from the payment service in the last hour"**
+> *Pulls logs directly from Loki without you needing to write a single line of query syntax.*
 
-This connects Kubernetes deployment state with Git history. When something breaks after a deployment, this is the question you're actually asking.
-
-> "Look at code and tell me what the latest code change did and its impact."
-
-![Example: Code change and operational impact](https://raw.githubusercontent.com/krovvidiv-code/image-storage/main/docs/images/image5.png)
-
-*In this example, Resolve AI goes further. You get the code change and its operational impact in one answer. No more switching between Git and your dashboards.*
-
-> "Show me errors in checkout, the related metrics, and example traces"
-
-This is the observability trifecta: logs tell you what went wrong, metrics tell you how widespread it is, traces tell you where in the request flow it happened. One question, three data sources, correlated.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/krovvidiv-code/image-storage/main/docs/images/image4.png" width="600" alt="Prometheus Metrics in Resolve AI">
+</p>
 
 ---
 
-## Step 3: Run a Complex Investigation
+## 🛠️ Step 2: Correlated Investigations
 
-Now you're ready to ask harder questions. The kind you ask during actual debugging. These aren't data retrieval requests. They're diagnostic questions that require analyzing patterns, comparing against baselines, and reasoning about root causes.
+Debugging is about connecting the dots. Resolve AI excels at jumping between infrastructure, logs, and code so you don't have to.
 
-> "Why is the checkout service slow?"
+Try questions that bridge multiple sources:
 
-This isn't a data retrieval question. It's how you actually think during an incident: Is checkout itself slow, or is it waiting on a dependency? Are there errors? Resource constraints? Recent changes? The answer works backward from the symptom.
+> **"Show me pod restarts and the errors that caused them"**
+> *Links Kubernetes pod events to the specific log errors that preceded the restart.*
 
-> "Compare error rates between now and yesterday for the payment service"
+> **"What code changes correspond to the recent payment deployment?"**
+> *Connects EKS deployment history with Git commits.*
 
-![Example: Time-based analysis](https://raw.githubusercontent.com/krovvidiv-code/image-storage/main/docs/images/image9.png)
-
-*In this example, you are seeing Resolve AI perform a time-based analysis. You're asking: is this normal, or is something wrong? The answer compares current behavior against a historical baseline.*
-
-> "What changed in the last 6 hours that could affect performance?"
-
-This is open-ended. The kind of question you ask when you don't know where to start. It checks deployments, configuration changes, and infrastructure events, then correlates them with any performance shifts.
-
-> "What services are affected when payment is slow?"
-
-Dependency analysis. When one service degrades, you need to know the blast radius. This maps the impact across the system. Resolve AI maps the impact of a degraded service across the system.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/krovvidiv-code/image-storage/main/docs/images/image5.png" width="600" alt="Code and Operational Impact">
+</p>
 
 ---
 
-## Step 4: Explore How Resolve AI Investigates Incidents
+## 🧩 Step 3: Complex Diagnostics
 
-The Playground has real issues to investigate. You might have noticed alerts in the **Recent Investigations** panel, things like "AWS MSK consumer lag is high" or "Frontend error logs above threshold".
+Now, treat Resolve AI as a technical partner. Ask the "Why" questions that usually require hours of manual analysis.
 
-These aren't staged. They're actual conditions in the demo environment. Pick one and explore how Resolve AI investigated the incident. Here is an example investigation of the "AWS MSK consumer lag is high" incident.
+> **"Why is the checkout service slow?"**
+> *Instead of simple data retrieval, Resolve AI analyzes latency, errors, and resource constraints to find the bottleneck.*
 
-![MSK consumer lag investigation](https://raw.githubusercontent.com/krovvidiv-code/image-storage/main/docs/images/image15.png)
+> **"Compare error rates between now and yesterday for the payment service"**
+> *Performs a time-based baseline analysis to determine if current behavior is truly anomalous.*
 
-### Other Scenarios to Explore
-
-If you want to simulate common incidents, try:
-
-- **"The payment service is experiencing high error rates. Investigate."**
-- **"Customers can't complete checkout. What's wrong?"**
-- **"Cart data isn't persisting. Why?"**
-- **"Multiple services are experiencing issues. What's the common cause?"**
-
-These are realistic scenarios. Follow the thread wherever it leads.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/krovvidiv-code/image-storage/main/docs/images/image9.png" width="600" alt="Time-based analysis">
+</p>
 
 ---
 
-## Pro Tips
+## 🕵️ Step 4: Live Incident Analysis
 
-- **Be specific:** "Show me payment errors in the last hour" works better than "show me errors."
-- **Use service names:** Resolve AI knows all 19 services—use their exact names.
-- **Ask "why":** You're not limited to data retrieval. Diagnostic questions work too.
-- **Follow up:** The best investigations are conversations. Ask clarifying questions based on what you find.
-- **Use @ mentions:** Type @ to reference services or dashboards by name for faster context.
+The Playground is "live," meaning it has real-world issues appearing in the **Recent Investigations** panel. Pick a live alert, such as *"AWS MSK consumer lag is high,"* and explore the findings.
 
----
-
-## What's Next?
-
-Now that you've learned the basics, connect your own environment:
-
-**→ [Quickstart: Connect Your Environment](quickstart-connect.md):** Set up Resolve AI for your own production systems
+<p align="center">
+  <img src="https://raw.githubusercontent.com/krovvidiv-code/image-storage/main/docs/images/image15.png" width="700" alt="MSK consumer lag investigation">
+</p>
 
 ---
 
-## Getting Help
+## Pro Tips for the Playground
 
-- **In Resolve AI**: Check the prompt suggestions or ask "what can you help me with?"
-- **Support**: help@resolveai.com or click Help in the sidebar
+- **Be Specific:** `“Show me payment errors in the last hour”` is more effective than a generic `“show me errors.”`
+- **Ask "Why":** Resolve AI is built for diagnostics, not just search.
+- **Iterate:** The best investigations are conversations. Follow up on what you find.
+- **Use @ Mentions:** Speed up your workflow by @-mentioning services or dashboards.
+
+---
+
+## Ready for Your Own Data?
+
+Once you've explored the Playground, connect your own production environment to start getting real-time insights.
+
+[**→ Quickstart: Connect Your Environment**](quickstart-connect.md)
+
+---
+
+### Need Help?
+- **In-App:** Ask `“What can you help me with?”`
+- **Support:** [help@resolveai.com](mailto:help@resolveai.com)
