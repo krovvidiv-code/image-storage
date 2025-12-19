@@ -47,7 +47,7 @@ When you first log in, you'll be presented with two primary ways to explore Reso
 
 Once you're in, you'll land on the main investigation screen. This is your command center for production intelligence.
 
-### Intuitive Investigations
+### Ask Questions
 Ask anything in natural language. No complex query syntax required. Resolve AI correlates logs, traces, metrics, infrastructure, and code to give you answers.
 
 ### @ Mentions
@@ -55,15 +55,15 @@ Ask anything in natural language. No complex query syntax required. Resolve AI c
 
 Type `@` to reference specific services, infrastructure components, or dashboards. Resolve AI pulls deep context from whatever you mention.
 
-### Visual Context
+### Share Images
 Use the **Image** button to share screenshots of dashboards or error messages. Resolve AI interprets visual data to help accelerate your investigation.
 
-### Smart Suggestions
+### Try Suggestions
 <img src="https://raw.githubusercontent.com/krovvidiv-code/image-storage/main/docs/images/image1.png" width="450" alt="Prompt suggestions">
 
 Below the input, you'll find example questions tailored to your environment. These are great starting points if you're exploring a new system.
 
-### Recent Activity
+### View Recent Activity
 <img src="https://raw.githubusercontent.com/krovvidiv-code/image-storage/main/docs/images/image8.png" width="450" alt="Recent investigations">
 
 Stay on top of what's happening. The dashboard surfaces recent alerts and investigations, like consumer lag or error spikes, allowing you to jump straight into the action.

@@ -13,7 +13,7 @@ Before you begin, ensure you have:
 
 ---
 
-## 1. Establish Your Organization
+## Step 1: Name Your Organization
 
 After logging in and selecting **Set up Resolve AI for your environment**, you'll name your organization.
 
@@ -26,7 +26,7 @@ After logging in and selecting **Set up Resolve AI for your environment**, you'l
 
 ---
 
-## 2. Activate Integrations
+## Step 2: Choose Your Integrations
 
 The integration screen is where you give Resolve AI access to your stack. The more you connect, the more powerful the cross-stack correlations become.
 
@@ -45,7 +45,7 @@ The integration screen is where you give Resolve AI access to your stack. The mo
 
 ---
 
-## 3. Configuration Step
+## Step 3: Configure Your Integration
 
 Each integration follows a simple, guided flow. Let's look at Grafana as an example:
 
@@ -62,7 +62,7 @@ Each integration follows a simple, guided flow. Let's look at Grafana as an exam
 
 ---
 
-## 4. Launch Your First Investigation
+## Step 4: Start Investigating
 
 Once your integrations show a green checkmark, you're ready. Click **Ask your first question** to enter the main interface with your live data.
 
