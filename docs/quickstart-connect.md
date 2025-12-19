@@ -92,7 +92,7 @@ Try these prompts to see Resolve AI in action with your systems:
 
 ---
 
-[**← Back to Getting Started**](getting-started.md) | [**Next: Working with Teams →**](https://docs.resolve.ai/teams)
+[**← Back to Getting Started**](getting-started.md) | [**Next: Customize Resolve AI for your environment →**](https://docs.resolve.ai/setup-and-integrations)
 
 ---
 
