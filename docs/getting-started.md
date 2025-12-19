@@ -47,23 +47,23 @@ When you first log in, you'll be presented with two primary ways to explore Reso
 
 Once you're in, you'll land on the main investigation screen. This is your command center for production intelligence.
 
-### 🔍 Intuitive Investigations
+### Intuitive Investigations
 Ask anything in natural language. No complex query syntax required. Resolve AI correlates logs, traces, metrics, infrastructure, and code to give you answers.
 
-### 🏷️ @ Mentions
+### @ Mentions
 <img src="https://raw.githubusercontent.com/krovvidiv-code/image-storage/main/docs/images/image7.png" width="350" alt="@ mentions">
 
 Type `@` to reference specific services, infrastructure components, or dashboards. Resolve AI pulls deep context from whatever you mention.
 
-### 🖼️ Visual Context
+### Visual Context
 Use the **Image** button to share screenshots of dashboards or error messages. Resolve AI interprets visual data to help accelerate your investigation.
 
-### ✨ Smart Suggestions
+### Smart Suggestions
 <img src="https://raw.githubusercontent.com/krovvidiv-code/image-storage/main/docs/images/image1.png" width="450" alt="Prompt suggestions">
 
 Below the input, you'll find example questions tailored to your environment. These are great starting points if you're exploring a new system.
 
-### 🚨 Recent Activity
+### Recent Activity
 <img src="https://raw.githubusercontent.com/krovvidiv-code/image-storage/main/docs/images/image8.png" width="450" alt="Recent investigations">
 
 Stay on top of what's happening. The dashboard surfaces recent alerts and investigations, like consumer lag or error spikes, allowing you to jump straight into the action.
@@ -72,7 +72,9 @@ Stay on top of what's happening. The dashboard surfaces recent alerts and invest
 
 ## Core Capabilities
 
-Resolve AI isn't just a dashboard; it's an intelligent partner for your production stack.
+Resolve AI is AI for prod. It works across your code, infrastructure, telemetry, and team knowledge to help engineering teams resolve incidents, optimize costs, and code with prod context.
+
+Engineering teams at companies like Coinbase, ZScaler, Doordash, Salesforce, and Gametime use Resolve to reduce their mean time to resolve incidents and improve engineering productivity.
 
 > [!NOTE]
 > ### How it works:
@@ -86,7 +88,7 @@ Resolve AI isn't just a dashboard; it's an intelligent partner for your producti
 
 - **Incident Response:** Resolve AI joins your on-call rotation, investigating issues and surfacing root causes with evidence before you even wake up.
 - **Cost Optimization:** Discover infrastructure savings and performance wins through a simple chat interface.
-- **Architectural Context:** Get implementation guidance and architectural recommendations with the full context of your production system.
+- **Production Context:** Get implementation guidance and insights with the full context of your production system.
 
 ---
 

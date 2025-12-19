@@ -13,7 +13,7 @@ You're connected to a live e-commerce platform running on **AWS EKS** with 19 mi
 
 ---
 
-## 🚀 Step 1: Data Retrieval Basics
+## Step 1: Data Retrieval Basics
 
 The best way to start is by asking for specific data. This helps you get comfortable with the natural language interface and understand what's available.
 
@@ -31,7 +31,7 @@ Try these prompts:
 
 ---
 
-## 🛠️ Step 2: Correlated Investigations
+## Step 2: Correlated Investigations
 
 Debugging is about connecting the dots. Resolve AI excels at jumping between infrastructure, logs, and code so you don't have to.
 
@@ -49,7 +49,7 @@ Try questions that bridge multiple sources:
 
 ---
 
-## 🧩 Step 3: Complex Diagnostics
+## Step 3: Complex Diagnostics
 
 Now, treat Resolve AI as a technical partner. Ask the "Why" questions that usually require hours of manual analysis.
 
@@ -65,7 +65,7 @@ Now, treat Resolve AI as a technical partner. Ask the "Why" questions that usual
 
 ---
 
-## 🕵️ Step 4: Live Incident Analysis
+## Step 4: Live Incident Analysis
 
 The Playground is "live," meaning it has real-world issues appearing in the **Recent Investigations** panel. Pick a live alert, such as *"AWS MSK consumer lag is high,"* and explore the findings.
 
