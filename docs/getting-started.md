@@ -88,7 +88,7 @@ Engineering teams at companies like Coinbase, ZScaler, Doordash, Salesforce, and
 
 - **Incident Response:** Resolve AI joins your on-call rotation, investigating issues and surfacing root causes with evidence before you even wake up.
 - **Cost Optimization:** Discover infrastructure savings and performance wins through a simple chat interface.
-- **Production Context:** Get implementation guidance and insights with the full context of your production system.
+- **Code with Prod Context:** Get implementation guidance and insights with the full context of your production system.
 
 ---
 
